@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Clock</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        font-weight: 700;
+      }
+      body {
+        display: flex;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #0f062c, #2f1e7a);
+      }
+
+      .clock {
+        display: flex;
+        flex-wrap: wrap;
+        background: #f4dfc828;
+        padding: 10ex 15ex;
+        border: 5px solid #2f1e7a;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        animation: bordercolor 5s infinite;
+      }
+
+      @keyframes bordercolor {
+        0% {
+          border-top-color: #1f1258;
+        }
+        25% {
+          border-top-color: #1f1258;
+        }
+        50% {
+          border-right-color: #1f1258;
+        }
+        75% {
+          border-bottom-color: #1f1258;
+        }
+        100% {
+          border-left-color: #1f1258;
+        }
+      }
+      .clock p {
+        color: #fff;
+        font-size: 100px;
+        padding: 0px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock">
+      <p id="Hour"></p>
+      <p id="Min"></p>
+      <p id="Sec"></p>
+    </div>
+
+    <script src="Script.js"></script>
+  </body>
+</html>
